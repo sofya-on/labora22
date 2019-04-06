@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\oddsidemargin=-0.3cm
+\evensidemargin=-0.3cm
+\topmargin=-20pt
+\textheight=700pt
+\textwidth=16cm
+
+\setcounter{equation}{2}
+
+\begin{document}
+\makeatletter 
+%..МОДИФИКАЦИЯ КЛАССОВ \\ УБРАТЬ НУМЕРАЦИЮ
+\renewcommand{\@oddhead}
+%..ВЕРХНИЙ КОЛОНТИТУЛ НЕЧЕТНЫХ СТРАНИЦ
+{ \small 242\hfil \scriptsize СИСТЕМЫ ОБЫКНОВЕННЫХ ДИФФЕРЕНЦИАЛЬНЫХУРАВНЕНИЙ   \hfil{ \small [ГЛ. VII} }
+
+\renewcommand{\@evenhead}
+{   \small {\ \S1]} \hfil  \scriptsize \S НОРМАЛЬНАЯ ФОРМА СИСТЕМЫ ДИФФЕРИНЦИАЛЬНЫХ УРАВНЕНИЙ \hfil  \small 243}
+
+\noindentций,
+ \quad*числом\qquad n -- k,\quad следующим\quad образом:\quad\quad обозначим\quad для\quad симметрии\quad \quad \quad\(y_1 = y_{10} \) и введем новые функции:
+\\
+\[ y_{11} = y_1', y_{12}=y_1'' ,..., y_{1, m_1-1} = y_{1}^{(m_1-1).} \]
+\\
+Далее, аналогично:
+
+\[ y_2 = y_{20}, y_2'=y_{21}, y_2''= y_{22} ,..., y_{2}^{(m_2-1)}=y_{2, m_2-1} , \]
+\[
+.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\]
+\[.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\]
+\[ y_k = y_{k0}, y_k'=y_{k1}, y_k''= y_{k2} ,..., y_{k}^{(m_k-1)}=y_{k, m_k-1} . \]
+\\
+Мы\quad имеем 
+\quad всего\quad\quad\quad \( m_1\quad +\quad m_2 +\quad  ... +\quad m_k\)\quad  функций\quad \quad  \(y_{ij}( i= 1,\quad  2,\quad ...,\quad  k, \quad\quad\quad\quad \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad  \quad  j\quad  =\quad j=\quad 0,\quad 1,\quad 2, \quad...,\quad m_i -1)\);\quad\quad\quad для\quad них\quad система\quad (2)\quad заменится\quad следующей\quad эквивалентною: 
+
+\begin{equation}
+\left.\begin{gathered}
+\frac{d y_{10}}{d x} = y_{11}, \quad \; \frac{d y_{11}}{d x} = y_{12},\quad \; .\quad.\quad .\frac{d y_{1,m_1-2}}{d x} = y_{1,m_1-1},\quad\quad\quad\quad\\
+\frac{d y_{1,m_1-1}}{d x} = f(x, y_{10}, y_{11},\quad.\quad.\quad., y_{1,m_1-1},\quad.\quad.\quad., y_{ko},\quad.\quad.\quad., y_{k,m_k-1}),\\
+\frac{d y_{20}}{d x}=y_{21}, \frac{d y_{21}}{d x}= y_{22},\quad.\quad.\quad.,\frac{d y_{2,m_2-2}}{d x} = y_{2,m_2-1},\\
+ \frac{d y_{2,m_2-1}}{d x} = f_2(x, y_{10}, y_{11},\quad.\quad.\quad., y_{1,m_1-1}, \quad.\quad.\quad., y_{ko},\quad.\quad.\quad., y_{k,m_k-1}),\\.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad
+ \\.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad .\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad\\
+  \frac{d y_{k0}}{d x} = y_{k1},  \; \frac{d y_{k1}}{d x} = y_{22}, \;\quad.\quad.\quad.\frac{d y_{k,m_k-2}}{d x} = y_{k,m_k-1},\\
+  \frac{d y_{k,m_k-1}}{d x} = f_k(x, y_{10}, y_{11},\quad.\quad.\quad., y_{1,m_1-1},\quad.\quad.\quad., y_{ko},\quad.\quad.\quad., y_{k,m_k-1}).
+\end{gathered}\right\}
+\end{equation}
+
+\noindentКаждая (например i-я) из k групп уравнений (3) содержит \(m_i -1 \) уравнений, которые непосредственно следуют из определения функций \(y_{ij}\), и последнее уравнение, которое получается из i-го уравнения системы (2), если в его правой части входящие в него производные заменить вновь введенными функциями. Заменяя, в силу первых уравнений первой строки системы (3), последовательно \(y_{11}\) через \( \frac{dy_1}{dx}\) \(v_{12}\) через  \( \frac{dy_{11}}{dx}\)= \( \frac{d^2y_1}{dx^2}\),..., \( \frac{dy_{1,m_1-1}}{dx}\)= \( \frac{d^{m_i}y_1}{dx^{m_1}}\) и аналогично для других групп и внося эти значения в последние уравнения каждой строки, мы, очевидно, возвращаемся к системе (2). Отвлекаясь от частного вида первых уравнений каждой строки системы (3) и от их разделения на группы, мы пронумеруем искомые функции в виде одного постого ряда:
+\[ y_1, y_2, ..., y_n \]
+\\
+\\
+
+и будем рассматривать вместо системы (3) следующую:
+
+\begin{equation}
+\left.\begin{gathered}
+\frac{d y_1}{d x} = f_1 (x, y_1, y_2, ., ., y_n),\\
+\frac{d y_1}{d x} = f_1 (x, y_1, y_2, ., ., y_n),\\.\quad.\quad.\quad.\quad.\quad.\quad.\quad.\quad .\\
+ \frac{d y_n}{d x} = f_n (x, y_1, y_2, ., ., y_n).
+\end{gathered}\right\}
+\end{equation}
+
+\noindentСистема n уравненний  первого порядка вида (4), т.е. разрешенных относительно входящих в систему производных от искомых функций, называется системой, имеющей \emph{нормальную форму Коши }. Такими системами мы будем  преимущественно  заниматься в  дальнейшем. Очевидно, что система (3), как  частный  случай  системы  (4),  имеет  также нормальную  форму.
+
+\quad П\,р\,и\,м\,е\,ч\,а\,н\,и\,е.\quad Частным\quad  случаем\quad  канонической\quad  системы\quad  является\quad  одно\quad  уравнение\quad  n-го\quad  порядка,\quad  разрешенное \quad относительно\quad  старшей\quad  производной:
+\[y^{(n)}=f(x, y, y', y'', ..., y^{(n-1)}).\]
+Мы уже видели (гл. IV), что введением новых функций 
+\[ y_1=y', y_2=y'', ..., y_{n-1}=y^{(n-1)} \]
+оно заменяется следующей системою n уравнений:
+
+\begin{equation}
+\tag{3'}
+\left.\begin{gathered}
+  \frac{d y}{d x} = y_1,  \; \frac{d y_1}{d x} = y_{2}, \; ...\frac{d y_{n-2}}{d x} = y_{n-1},\quad \\
+  \frac{d y_{n-1}}{d x} = f(x, y, y_1, y_2 ..., y_{n-1}).
+\end{gathered}\right\}
+\end{equation}
+
+\quad\textsl{\bfseries2.} Можно\quad  утверждать\quad  и\quad  обратно,\quad  что в\,о\,о\,б\,щ\,е\quad  г\,о\,в\,о\,р\,я\quad  нормальная\quad  система\quad  n\quad  уравнений\quad  первого\quad  порядка\quad \quad  (4)\quad \quad  эквивалентна\quad  одному\quad  уравнению\quad  порядка\quad  n.
+
+В самом деле, дифференцируем первое из уравнений (4) по x,
+ \[ \frac{d^2y_1}{dx^2}=\frac{\delta f_1}{\delta x}+\frac{\delta f_1}{\delta y_1}  \frac{d y_1}{d x}+\frac{\delta f_1}{\delta y_2} \frac{d y_2}{d x}+\quad .\quad .\quad .+\frac{\delta f_1}{\delta y_n} \frac{\delta y_n}{\delta x}\quad , \]
+ и заменяем в результате \( \frac{d y_1}{d x}\) через их выражения \(f_i(x, y_1,\quad.\quad.\quad., y_n)\); получим:
+ \[ \frac{d^2 y_1}{d x^2}=\frac{\delta f_1}{\delta x}+\frac{\delta f_1}{\delta y_1}f_1+\frac{\delta f_1}{\delta y_2}f_2+\quad  .\quad .\quad .+\frac{\delta f_1}{\delta y_n}f_n, \]
+т.е. выражение вида:
+\[ \frac{d^2 y_1}{d x^2}=F_2(x, y_1, y_2,\quad  .\quad .\quad ., y_n).\eqno(4_2) \]
+\end{document}
+
